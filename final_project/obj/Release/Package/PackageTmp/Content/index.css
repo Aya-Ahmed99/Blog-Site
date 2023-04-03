@@ -1,0 +1,170 @@
+﻿.index
+{
+    background-color : #000;
+}
+
+.mynews {
+    padding: 30px 0;
+}
+.mynews a {
+    background-color: dodgerblue;
+    border-radius: 3px;
+    padding: 9px 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 45%;
+    margin-top: 20px;
+    display: inline-block;
+    transition : .5s ease-in-out;
+    text-decoration:none;
+}
+.mynews a:hover {
+    background-color: #ccc;
+    color: dodgerblue;
+    border: 1px solid #333;
+    border-radius: 10px 20px;
+    font-weight: bold;
+}
+.mynews h1 {
+    text-shadow: 4px 4px 8px dodgerblue;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 47px;
+    color : #fff
+}
+.news img {
+    width: 100%;
+}
+.myrow {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 12px;
+}
+.news {
+    width: 29.3333%;
+    border: 1px solid #ccc;
+    margin: 15px 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0 0 22px 0;
+    transition : all .5s ease-in-out;
+}
+.news:hover {
+    transform: scale(.9);
+    box-shadow: 0px 0px 19px 3px #ccc;
+}
+.news h4 {
+    padding: 4px 8px;
+    font-style: italic;
+    color: #ddd;
+    font-family: cursive;
+}
+.news p {
+    margin: 0 0 10px;
+    padding: 0 11px;
+    font-family: inherit;
+    color: #767679;
+    line-height : 1.6;
+}
+.news a {
+    text-decoration : none;
+    margin: 8px 10px;
+    padding: 10px 8px;
+    background-color: dodgerblue;
+    border-radius: 10px 20px;
+    display: inline-block;
+    color: #fff;
+    transition : .5s;
+    font-weight : bold;
+}
+.news a:hover {
+    background-color: #ccc;
+    color: dodgerblue;
+    border: 1px solid #333;
+    border-radius: 10px 20px;
+    font-weight: bold;
+}
+.homephoto 
+{
+    background-image: url('desingimg/pexels-photo-368893.jpeg');
+    background-position : center center;
+    background-size : cover;
+    background-repeat : no-repeat;
+    height : 350px;
+    position : relative;
+}
+.homedec 
+{
+    color : #fff;
+    padding-top : 70px;
+}
+.homedec p {
+    padding: 5px 260px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: cursive;
+    color: #ddd;
+}
+.homedec h1 {
+    font-weight: bold;
+    font-family: 'Glyphicons Halflings';
+    font-style: italic;
+    text-shadow: 4px 4px 8px;
+    color:#fff;
+}
+.homcontact h1 {
+    font-size: 50px;
+    padding: 0 0 40px 0;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 4px 4px 8px dodgerblue;
+}
+.homcontact label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.homcontact input[type="submit"] {
+    padding: 7px 30px;
+    background-color: dodgerblue;
+    border: 1px solid #000;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    width : 100%;
+    border-radius: 10px;
+    transition : all .5s ease-in-out ;
+}
+.homcontact input[type="submit"]:hover
+{
+    background-color : #fff;
+    color : dodgerblue;
+
+}
+.homcontact {
+    padding: 70px 0 120px 0;
+    background-color : #000;
+    color:#fff;
+}
+.homcontact .row 
+{
+    margin-bottom : 20px;
+}
+@media (max-width : 650px) {
+    .news {
+        width: 94.3333%;
+    }
+
+    .homedec p {
+        padding: 5px 20px;
+    }
+}
+@media (min-width : 650px) and (max-width : 992px) {
+    .news {
+        width: 47.3333%;
+    }
+
+    .homedec p {
+        padding: 5px 154px;
+    }
+}

@@ -1,0 +1,78 @@
+﻿.contact 
+{
+    background-image: url('desingimg/GettyImages_1233570115_copy.0.jpg');
+    background-size : cover;
+    background-repeat : no-repeat;
+    background-position : center center;
+    position : relative;
+    min-height : 640px;
+}
+.contact .h 
+{
+    color : #fff;
+    padding : 10px 0 40px 0;
+}
+.contact .icon {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.contact .icon p {
+    padding: 17px 21px;
+    color: #000;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 11px 0 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.icons
+{
+    padding-top : 30px;
+}
+
+.contact .condata h3 {
+    font-family: cursive;
+    font-weight : 700;
+    font-style : italic;
+}
+.contact form 
+{
+    background-color : #fff;
+    padding : 10px 20px 20px 20px;
+    border-radius : 20px;
+
+}
+.contact form .row 
+{
+    margin : 10px 0;
+}
+.contact .h h1 {
+    font-size: 55px;
+    text-shadow: 4px 4px 10px #ccc;
+    font-style: italic;
+    font-family: cursive;
+}
+.contact .h p {
+    font-size: 20px;
+
+    font-family: Arile;
+}
+.contact .over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8)
+}
+@media (max-width: 760px)
+{
+    .contact 
+    {
+        height : 1070px
+    }
+}

@@ -1,0 +1,51 @@
+﻿/********** registeration form ******/
+.backreg {
+    background-image: url('desingimg/pexels-travis-blessing-1363876.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.reg {
+    padding-top: 20px;
+    padding-bottom: 22px;
+    color: #fff;
+    position: relative;
+}
+
+.reg .regform .row 
+{
+    margin-top : 12px;
+}
+
+.reg .lable
+{
+    font-weight:bold;
+}
+.reg  .regform {
+    margin-top: 50px;
+    padding-bottom : 70px;
+}
+
+.regbtn {
+    border: none;
+    background-color: dodgerblue;
+    color: #fff;
+    width: 164px;
+    border-radius: 19px 2px;
+    padding: 8px 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.goreg a {
+    text-decoration: none;
+    background-color: #529bda;
+    padding: 2px 7px;
+    border-radius: 5px;
+    line-height: 4.5;
+    color: #fff;
+    font-size: 15px;
+}
+

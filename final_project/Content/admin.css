@@ -1,0 +1,38 @@
+﻿.pageadmin
+{
+    background-color : #000;
+}
+.pageadmin .adminname {
+    font-size: 52px;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px dodgerblue;
+    color: #fff;
+    font-family : cursive;
+}
+
+
+.pageadmin table 
+{
+    background-color : #fff;
+    margin-bottom : 80px;
+}
+
+
+.pageadmin .userdata {
+    font-style: italic;
+    font-weight: 600;
+    text-shadow: 4px 4px 8px #ccc;
+    color: #fff;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+    text-shadow: 4px 4px 8px #ccc;
+    color: #fff;
+    padding: 10px 0;
+    font-style: italic;
+}
+.catalog .dec {
+    width: 41%;
+}

@@ -1,0 +1,43 @@
+﻿@model List<news>
+@{
+    ViewBag.Title = "mynews";
+}
+@section style
+{
+    <link href="~/Content/mynews.css" rel="stylesheet" />
+}
+<div class="mynews">
+    <div class="container">
+        <h1 class="text-center lead t">My News</h1>
+
+        @foreach (var item in Model)
+        {
+    <div class="news">
+        <h1 class="title">@item.title</h1>
+        <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="~/attach/imgnews/@item.photo" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="p">@item.bref</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 postinfo">
+                    <span>@item.newdate</span>
+                    <span> Author :  @item.user.username</span>
+                </div>
+                <div class="col-md-6 text-center postinfo">
+                    @Html.ActionLink("Edit", "edit", new { id = item.id})
+                    @Html.ActionLink("Delete", "delete",new { id = item.id})
+                    @Html.ActionLink("Read More...", "details",new { id = item.id})
+                </div>
+            </div>
+    </div>
+        }
+    </div>
+</div>
+

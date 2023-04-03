@@ -1,0 +1,117 @@
+﻿@model user
+@{
+    ViewBag.Title = "register";
+}
+@section style
+{
+    <link href="~/Content/register.css" rel="stylesheet" />
+}
+<div class="container-fluid  backreg">
+    <div class="overlay"></div>
+
+    <div class="container reg">
+        <h1>Registration Form </h1>
+
+        <form class="regform" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.username)
+                </div>
+                <div class="input col-md-3">
+                    @Html.TextBoxFor(n => n.username, new { @class = "form-control" })
+                </div>
+                <div class="input col-md-3">
+                    @Html.ValidationMessageFor(n => n.username, null, new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.userpassword)
+                </div>
+                <div class="input col-md-3">
+                    @Html.PasswordFor(n => n.userpassword, new { @class = "form-control" })
+                </div>
+                <div class="input col-md-3">
+                    @Html.ValidationMessageFor(n => n.userpassword, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.confirmpassword)
+                </div>
+                <div class="input col-md-3">
+                    @Html.PasswordFor(n => n.confirmpassword, new { @class = "form-control" })
+                </div>
+                <div class="input col-md-3">
+                    @Html.ValidationMessageFor(n => n.confirmpassword, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.email)
+                </div>
+
+                <div class="input col-md-3">
+                    @Html.TextBoxFor(n => n.email, new { @class = "form-control" })
+                </div>
+
+                <div class="input col-md-3">
+                    @Html.ValidationMessageFor(n => n.email, null, new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.age)
+                </div>
+                <div class="input col-md-3">
+                    @Html.TextBoxFor(n => n.age, new { @class = "form-control" })
+                </div>
+                <div class="input col-md-3">
+                    @Html.ValidationMessageFor(n => n.age, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.useraddress)
+                </div>
+                <div class="input col-md-3">
+                    @Html.TextBoxFor(n => n.useraddress, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="lable col-md-3">
+                    @Html.LabelFor(n => n.photo)
+                </div>
+                <div class="input col-md-3">
+                    <input type="file" name="img" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="lable col-md-2">
+                    <input class="regbtn" type="submit" value="Register" />
+                </div>
+                <div class="col-sm-4 goreg">
+                    @Html.ActionLink("You Have Account ?! Login Now..", "login")
+                </div>
+                <div class="lable col-md-3 text-danger">
+                    @ViewBag.satus
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+@section scripts
+{
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+}

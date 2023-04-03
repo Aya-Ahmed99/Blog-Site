@@ -1,0 +1,56 @@
+﻿@model catalog
+@{
+    ViewBag.Title = "addcat";
+}
+@section style 
+{
+    <link href="~/Content/addcat.css" rel="stylesheet" />
+}
+<div class="addcat">
+    <div class="overlay">
+        <div class="container">
+            <h1 class="text-center">ADD Category</h1>
+
+            <form method="post" class="logform">
+                <div class="row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.LabelFor(n => n.catname)
+                    </div>
+
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(n => n.catname, new { @class = "form-control" })
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.LabelFor(n => n.catdesc)
+                    </div>
+
+                    <div class="col-sm-3">
+                       <textarea class="form-control" rows="8"></textarea>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                    </div>
+
+                    <div class="col-sm-3">
+                        <input type="submit" value="ADD" class="btn btn-info logbtn" />
+                    </div>
+
+                    <div class="col-sm-2 text-danger">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

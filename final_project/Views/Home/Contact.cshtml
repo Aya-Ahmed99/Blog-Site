@@ -1,0 +1,83 @@
+﻿@model contact
+@{
+    ViewBag.Title = "Contact";
+}
+@section style
+{
+    <link href="~/Content/contact.css" rel="stylesheet" />
+}
+<div class="contact">
+    <div class="over">
+        <div class="container">
+            <div class="h text-center">
+                <h1>Contact Us</h1>
+                <p>
+                    You Can Contact With Us From This Page to Tell Us About Any Problem<br /> With You When You
+                    Use Our WebSite...
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 icons">
+                    <div class="icon">
+                        <div>
+                            <p><i class="glyphicon glyphicon-map-marker"></i></p>
+                        </div>
+                        <div class="condata">
+                            <h3>Location</h3>
+                            <h5>23 Ata Street , Banha</h5>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <div>
+                            <p><i class="glyphicon glyphicon-earphone"></i></p>
+                        </div>
+                        <div class="condata">
+                            <h3>Phone</h3>
+                            <h5>+02 01090370531</h5>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <div>
+                            <p><i class="glyphicon glyphicon-comment"></i></p>
+                        </div>
+                        <div class="condata">
+                            <h3>Message</h3>
+                            <h5>newstoday22@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <form method="post" action="/contact/sendmess">
+                        <h1>Send Massage</h1>
+                        <div class="row">
+                            @Html.LabelFor(n => n.fullname)
+                            @Html.TextBoxFor(n => n.fullname, new { @class = "form-control" })
+                        </div>
+                        <div class="row">
+                            @Html.LabelFor(n => n.email)
+                            @Html.TextBoxFor(n => n.email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(n => n.email, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row">
+                            @Html.LabelFor(n => n.message)
+                            @Html.TextAreaFor(n => n.message, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(n => n.message, null, new { @class = "text-danger" })
+
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Send" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+}

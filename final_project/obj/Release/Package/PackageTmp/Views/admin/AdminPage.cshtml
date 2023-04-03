@@ -1,0 +1,110 @@
+﻿@model List<user>
+@{
+    ViewBag.Title = "AdminPage";
+}
+
+@section style
+{
+
+    <link href="~/Content/admin.css" rel="stylesheet" />
+}
+
+<div class="pageadmin">
+    <div class="container">
+        <h1 class="page-header text-capitalize adminname">@ViewBag.admin</h1>
+        <h1 class="text-center userdata">Users Data</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>User ID</th>
+                <th>UserName</th>
+                <th>User E-Mail</th>
+                <th>User Age</th>
+                <th>User Address</th>
+                <th>User Photo</th>
+                <th>Delete</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                if (item.username == "admin")
+                {
+                    continue;
+                }
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.username</td>
+                    <td>@item.email</td>
+                    <td>@item.age</td>
+                    <td>@item.useraddress</td>
+                    @if (item.photo == null)
+                    {
+                        <td>......</td>
+                    }
+                    else
+                    {
+                        <td><img width="80" height="80" src="~/attach/@item.photo" /></td>
+
+                    }
+                    <td>@Html.ActionLink("Delete", "delete", new { id = @item.id }, new { @class = "btn btn-danger" })</td>
+
+                </tr>
+
+            }
+        </table>
+    </div>
+
+    <div class="container catalog">
+        <h1 class="text-center page-header">Category Data</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Category Description</th>
+                <th>Delete</th>
+
+            </tr>
+            @foreach (var ca in ViewBag.cat)
+            {
+
+                <tr>
+                    <td>@ca.id</td>
+                    <td>@ca.catname</td>
+                    <td class="dec">@ca.catdesc</td>
+                    <td>@Html.ActionLink("Delete", "deletecat", new { id = @ca.id }, new { @class = "btn btn-danger" })</td>
+
+                </tr>
+
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td><a href="/admin/addcat" class="btn btn-primary">ADD New Category</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="container message">
+        <h1 class="text-center page-header">FeedBack </h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Message ID</th>
+                <th>Full Name For User</th>
+                <th>E-mail For User</th>
+                <th>Message Body</th>
+            </tr>
+            @foreach (var it in ViewBag.con)
+            {
+
+                <tr>
+                    <td>@it.id</td>
+                    <td>@it.fullname</td>
+                    <td >@it.email</td>
+                    <td>@it.message</td>
+
+                </tr>
+
+            }
+
+        </table>
+    </div>
+</div>

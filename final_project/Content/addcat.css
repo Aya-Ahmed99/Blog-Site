@@ -1,0 +1,44 @@
+﻿.addcat 
+{
+    background-image: url('desingimg/cityscape.jpg');
+    min-height :700px;
+    background-repeat : no-repeat;
+    background-size : cover;
+    background-position : center center;
+    position : relative;
+}
+.addcat h1
+{
+    color : #fff;
+    font-size : 65px;
+    text-shadow : 4px 4px 12px #0094ff;
+    font-style : italic;
+    font-family : cursive;
+    padding : 40px 0;
+}
+.addcat form .row 
+{
+    margin-bottom : 10px;
+    color : #fff;
+}
+
+
+.addcat form label {
+    font-weight: bold;
+    font-style: italic;
+    font-family: cursive;
+    font-size : 16px
+}
+
+.addcat .logbtn {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.addcat form {
+    box-shadow: 14px 0px 14px -2px #ccc,-14px 0px 14px -2px #ccc;
+    padding : 40px 20px ;
+}

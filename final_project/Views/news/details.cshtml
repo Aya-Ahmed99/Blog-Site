@@ -1,0 +1,42 @@
+﻿@model news
+@{
+    ViewBag.Title = "details";
+}
+
+
+@section style
+{
+    <link href="~/Content/mynews.css" rel="stylesheet" />
+}
+<div class="mynews">
+    <div class="container">
+        <h1 class="text-center lead t">News Details</h1>
+        <div class="news">
+            <h1 class="title">@Model.title</h1>
+            <div class="row">
+                <div class="col-xs-12">
+                    <img class="img-responsive" src="~/attach/imgnews/@Model.photo" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="p pref">@Model.bref</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="p">@Model.newdesc</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 postinfo">
+                    <span>@Model.newdate</span>
+                    <span> Author :  @Model.user.username</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+﻿@model List<news>
+@{
+    ViewBag.Title = "allnews";
+}
+
+@section style
+{
+    <link href="~/Content/allnews.css" rel="stylesheet" />
+}
+
+<div class="index">
+    <div class="container mynews">
+        <h1 class="text-center ">All News </h1>
+        <p class="text-center p">Here , You Will See All Our News In Our WebSite<br />And You Will Know Author Of This New. </p>
+        <div class="myrow">
+            @foreach (var item in Model)
+            {
+                <div class="news">
+                    <img src="~/attach/imgnews/@item.photo" />
+                    <h4>@item.title</h4>
+                    <p>@item.bref</p>
+                    <a href="/news/details/@item.id" class="btn-btn-primary">Read More...</a>
+                    <div class="authordata ">
+                        <h5>@item.user.username</h5>
+                        <h5>@item.newdate</h5>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>

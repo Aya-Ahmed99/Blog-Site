@@ -1,0 +1,134 @@
+﻿@model List<news>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section style
+{
+
+    <link href="~/Content/index.css" rel="stylesheet" />
+}
+
+<div id="myslide" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myslide" data-slide-to="0" class="active"></li>
+        <li data-target="#myslide" data-slide-to="1"></li>
+        <li data-target="#myslide" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+            <div class="overlay"></div>
+            <img src="~/Content/desingimg/slider01.jpg" />
+            <div class="carousel-caption hidden-xs">
+                <h1>with <strong>News ToDay</strong> Know all New</h1>
+                <a class="btn btn-primary" href="#">Get info</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="overlay"></div>
+            <img src="~/Content/desingimg/slider02.jpg" />
+            <div class="carousel-caption hidden-xs">
+                <h1>with <strong>News ToDay</strong> Know all New</h1>
+                <a class="btn btn-primary" href="#">Get info</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="overlay"></div>
+            <img src="~/Content/desingimg/slider03.jpg" />
+            <div class="carousel-caption hidden-xs">
+                <h1>with <strong>News ToDay</strong> Know all New</h1>
+                <a class="btn btn-primary" href="#">Get info</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myslide" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myslide" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="index">
+    <div class="container mynews">
+        <h1 class="text-center">Our News </h1>
+        <div class="myrow">
+            @foreach (var item in Model)
+            {
+                <div class="news">
+                    <img src="~/attach/imgnews/@item.photo" />
+                    <h4>@item.title</h4>
+                    <p>@item.bref</p>
+                    <a href="/news/details/@item.id" class="btn-btn-primary">Read More...</a>
+                </div>
+                var i = item.id;
+                if (i == 6)
+                {
+                    break;
+                }
+            }
+        </div>
+        @Html.ActionLink("AllNews", "allnews", "news")
+
+    </div>
+</div>
+<div class="container-fluid homephoto">
+    <div class="overlay">
+        <div class="container text-center homedec">
+            <h1>News To Day</h1>
+            <p>" Our site provides you with all the daily news accurately and clearly,
+            and our site works to investigate the accuracy to deliver the news correctly 
+            to you.. Visit us on a daily basis to know everything new in all fields. "</p>
+        </div>
+    </div>
+    
+</div> 
+
+<div class="container-fluid homcontact">
+    <div class="container">
+        <h1 class="text-center">Contact Us</h1>
+        <form>
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-2">
+                    <label>User Name</label>
+                </div>
+                <div class="col-sm-6">
+                    <input class="form-control" type="text" name="username" />
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-2">
+                    <label>Massage</label>
+
+                </div>
+                <div class="col-sm-6">
+                    <textarea class="form-control" rows="10">  </textarea>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-5">
+                </div>
+                <div class="col-sm-7">
+                    <input type="submit" value="Send" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
